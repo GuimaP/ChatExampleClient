@@ -1,0 +1,14 @@
+<h1>Home</h1>
+<h2>{{a}}</h2>
+<form ng-submit="send()">
+	<textarea ng-model='message'></textarea>		
+	<input type="text" placeholder='For Who' ng-model='to'/>
+	<input type="submit"  value="enviar">
+</form>
+<ul class='conversa'>
+	<li ng-repeat="conversa in conversas" ng-click="talk($index)">
+		{{conversa.user.name}}
+		<span>{{conversa.count}}</span>
+		
+	</li>
+</ul>
